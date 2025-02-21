@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Veer Bajaj Copyright.-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="icon" href="https://www.gstatic.com/classroom/logo_square_rounded.svg" type="image/svg+xml">
+        <style>
+            :root {
+                --primary-color: #0f0f0f;
+                --secondary-color: #1a1a1a;
+                --background-color: #121212;
+                --card-background-color: #1e1e1e;
+                --text-color: #0ff;
+                --font-family: 'Arial', sans-serif;
+            }
+
+            body {
+                font-family: var(--font-family);
+                background-color: var(--background-color);
+                color: var(--text-color);
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: var(--primary-color);
+                text-align: center;
+                padding: 1.5rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                box-shadow: 0px 0px 10px var(--text-color);
+            }
+
+            nav {
+                background-color: var(--secondary-color);
+                padding: 1rem;
+                text-align: center;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                list-style: none;
+                padding: 0;
+            }
+
+            nav ul li a {
+                color: var(--text-color);
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .content {
+                margin: 20px;
+                background-color: var(--card-background-color);
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.3);
+            }
+
+            .lesson-card {
+                background-color: var(--card-background-color);
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
+            }
+
+            .lesson-card h2 {
+                margin-top: 0;
+                color: #ff00ff;
+            }
+
+            footer {
+                background-color: var(--primary-color);
+                text-align: center;
+                padding: 1rem;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+                box-shadow: 0px 0px 10px var(--text-color);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Online Educational Lessons</h1>
+            <p>Learn something new every day!</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#lesson1">Lesson 1</a></li>
+                <li><a href="#lesson2">Lesson 2</a></li>
+                <li><a href="#lesson3">Lesson 3</a></li>
+                <li><a href="#lesson4">Lesson 4</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section id="lesson1" class="lesson-card">
+                <h2>Lesson 1: The Basics of HTML</h2>
+                <p>This lesson will introduce you to the basics of HTML and how to structure a webpage.</p>
+            </section>
+
+            <section id="lesson2" class="lesson-card">
+                <h2>Lesson 2: CSS Styling</h2>
+                <p>Learn about styling your webpage with CSS to make it look more attractive.</p>
+            </section>
+
+            <section id="lesson3" class="lesson-card">
+                <h2>Lesson 3: JavaScript Basics</h2>
+                <p>In this lesson, we'll cover the fundamentals of JavaScript, including variables and functions.</p>
+            </section>
+
+            <section id="lesson4" class="lesson-card" style="display:none;">
+                <h2>Lesson 4: Extra Credit</h2>
+                <label for="userInput">Type your password to see more work:</label>
+                <input type="text" id="userInput" placeholder="Type here..." 
+                    style="background-color: #1a1a1a; color: #0ff; border: 2px solid #0ff; padding: 10px; border-radius: 5px; font-size: 16px; outline: none;">
+                <div id="specialContent" style="display:none;">
+                    <h2>Welcome, Gamer!</h2>
+                    <p>This is just for gamers. Enjoy!</p>
+                    <p>Delete "gamer" above to revert to the hidden games</p>
+                    <p></p>
+                    
+                    <details>
+                    <summary>Games</summary>
+                    <div>
+                        <details>
+                            <br>
+                            <summary>Get some Geometry lessons</summary>
+                            <embed src="https://geometry-lessons.world/?ref=veerbajajcode" width="100%" height="790px" frameborder="0"></embed>
+                        </details>
+                        <details>
+                            <br>
+                            <summary>Google Sites Version</summary>
+                            <embed src="https://sites.google.com/site/unblockedgames77" width="100%" height="790px" frameborder="0"></embed>
+                        </details>
+                        <details>
+                            <br>
+                            <summary>Poki</summary>
+                            <embed src="https://pokiunblockedgames.com/" width="100%" height="790px" frameborder="0"></embed>
+                        </details>
+
+                        <details>
+                            <summary>More games</summary>
+                            <embed src="https://www.mixfreegames.com/" width="100%" height="790px" frameborder="0"></embed>
+                        </details>
+                        
+                        <details>
+                            <summary>Tunnel Rush</summary>
+                            <div class="game-section">
+                                <embed src="https://tunnelrush.app/?ref=veerbajajcode" width="1280px" height="790px" frameborder="0"></embed>
+                                <br>
+                            </div>
+                        </details>
+                    </div>
+                </details>
+                    <details>
+                        <summary>Chat</summary>
+                        <div>
+                            <embed src="https://chitchatter.im/public/Games4TheGoodDayz?embed=1" allow="camera;microphone;display-capture;fullscreen" width="800" height="800" />
+
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            function showLesson4() {
+                if (window.location.hash === "#lesson4") {
+                    document.getElementById("lesson4").style.display = "block";
+                }
+            }
+
+            window.onload = showLesson4;
+            window.onhashchange = showLesson4;
+
+            const userInput = document.getElementById('userInput');
+            const specialContent = document.getElementById('specialContent');
+
+            userInput.addEventListener('input', function() {
+                if (userInput.value.toLowerCase() === 'gamer') {
+                    specialContent.style.display = 'block';
+                } else {
+                    specialContent.style.display = 'none';
+                }
+                if (userInput.value.toLowerCase() === 'fullscreen') {
+                    const newTab = window.open('about:blank', '_blank');
+                    newTab.document.write('<title>Home</title><link rel="icon" href="https://www.gstatic.com/classroom/logo_square_rounded.svg" type="image/svg+xml"><h2>Welcome, Gamer!</h2><p>This is just for gamers. Enjoy!</p><p>Delete "gamer" above to revert to the hidden games</p><p></p><details><summary>Games</summary><div><details><br><summary>Get some Geometry lessons</summary><embed src="https://geometry-lessons.world/?ref=veerbajajcode" width="100%" height="790px" frameborder="0"></embed></details><details><br><summary>Shell Shockers</summary><embed src="https://mathdrills.info" width="100%" height="790px" frameborder="0"></embed></details><details><summary>Get some Hooda Math</summary><embed src="https://hooda-math.lol/?ref=veerbajajcode" width="100%" height="790px" frameborder="0"></embed></details><details> <summary>Tunnel Rush</summary><div class="game-section"><embed src="https://tunnelrush.app/?ref=veerbajajcode" width="1280px" height="790px" frameborder="0"></embed><br></div></details></div></details><details><summary>Chat</summary><div><embed src="https://chitchatter.im/public/Games4TheGoodDayz?embed=1" allow="camera;microphone;display-capture;fullscreen" width="800" height="800" /></div></details>');
+                    newTab.document.close();
+                }
+            });
+        </script>
+    </body>
+</html>
